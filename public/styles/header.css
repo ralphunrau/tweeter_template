@@ -1,0 +1,23 @@
+header {
+  font-family: 'Source Sans Pro', sans-serif;
+  height: 400px;
+  color: aliceblue;
+  background-color: #282d7a;
+  background-image: url("https://www.transparenttextures.com/patterns/arches.png");
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.profileName {
+  display: flex;
+}
+
+.firstName {
+  font-family: 'Source Sans Pro'; font-weight: 600;
+}
+
+.lastName {
+  font-family: 'Source Sans Pro'; font-weight: 300;
+}
