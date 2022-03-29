@@ -1,0 +1,52 @@
+main.container {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  margin-top: 20px;
+  margin-left: 5%;
+  margin-right: 5%;
+  background-color: #f4f1ec;
+  font-family: 'Bungee', cursive;
+}
+
+[type="submit"] {
+  background-color: rgb(59, 59, 252);
+  color: white;
+}
+
+section.new-tweet {
+  background-color: rgb(221, 221, 243);
+  margin-top: 20px;
+  width: 530px;
+}
+
+[id="tweet-text"] {
+  width: 500px;
+  height: 40px;
+  border-top: 0;
+  border-left: 0;
+  border-right: 0;
+  background-color: rgb(221, 221, 243);
+  font-family: 'Source Sans Pro';
+  font-weight: 600;
+}
+
+[action="/tweets"] {
+  margin-top: 15px;
+  margin-bottom: 15px;
+  margin-right: 15px;
+  margin-left: 15px;
+}
+
+div.submitLine {
+  display: flex;
+  justify-content: space-between;
+}
+
+.negative {
+  color: red;
+}
+
+.positive {
+  color: rgb(84, 81, 73);
+}
