@@ -50,3 +50,74 @@ div.submitLine {
 .positive {
   color: rgb(84, 81, 73);
 }
+
+.tweet-container {
+  margin-top: 20px;
+  height: 300px;
+  border-color: rgb(84, 81, 73);
+  border-style: solid;
+  font-family: 'Source Sans Pro';
+}
+
+.tweet-header {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: flex-start;
+  font-weight: 300;
+  margin-left: 20px;
+  margin-right: 20px;
+  margin-top: 20px;
+}
+
+.resize {
+  width: 70px;
+  height: 70px;
+  margin-right: 20px;
+}
+
+.twitter-handle {
+  color: rgb(203, 203, 235);
+  font-size: large;
+  font-weight: 600;
+}
+
+.tweet-header-left {
+  display: flex;
+  align-items: center;
+}
+
+.tweet-content {
+  margin-top: 60px;
+  margin-left: 20px;
+  margin-right: 20px;
+  border-color: rgb(84, 81, 73);
+  border-bottom: solid;
+  font-weight: 600;
+}
+
+.tweet-footer {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  margin-left: 20px;
+  margin-right: 20px;
+  font-size: medium;
+  font-weight: 600;
+}
+
+.tweet-footer-right {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 65px;
+  height: 40px;
+}
+
+.box-shadow {
+  box-shadow: 5px 10px;
+}
+
+.makeRed {
+  color: orangered;
+}
