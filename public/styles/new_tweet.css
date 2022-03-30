@@ -58,6 +58,9 @@ div.submitLine {
   border-style: solid;
   font-family: 'Source Sans Pro';
 }
+.tweet-container:hover {
+  box-shadow: 5px 10px;
+}
 
 .tweet-header {
   display: flex;
@@ -114,10 +117,25 @@ div.submitLine {
   height: 40px;
 }
 
-.box-shadow {
-  box-shadow: 5px 10px;
+.fa-heart:hover {
+  color: orangered;
 }
 
-.makeRed {
+.fa-flag:hover {
   color: orangered;
+}
+
+.fa-retweet:hover {
+  color: orangered;
+}
+
+.errorMsg {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 20px;
+  width: 100%;
+  border: solid;
+  border-color: red;
+  color: red;
 }

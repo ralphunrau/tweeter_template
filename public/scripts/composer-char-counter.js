@@ -11,37 +11,4 @@ $(document).ready(() => {
       $(childrenElem).addClass('positive');
   }
   });
-
-  $('.tweet-container').hover(
-    function() {
-      $(this).addClass('box-shadow');
-    }, function() {
-      $(this).removeClass('box-shadow');
-    }
-  );
-
-  $('.fa-flag').hover(
-    function() {
-      $(this).addClass('makeRed');
-    }, function() {
-      $(this).removeClass('makeRed');
-    }
-  );
-
-  $('.fa-retweet').hover(
-    function() {
-      $(this).addClass('makeRed');
-    }, function() {
-      $(this).removeClass('makeRed');
-    }
-  );
-
-  $('.fa-heart').hover(
-    function() {
-      $(this).addClass('makeRed');
-    }, function() {
-      $(this).removeClass('makeRed');
-    }
-  );
 });
-
