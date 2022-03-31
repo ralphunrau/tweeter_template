@@ -4,10 +4,10 @@
  * Reminder: Use (and do all your DOM work in) jQuery's document ready function
  */
 
-
-
 $(document).ready(() => {
+
   $('.errorMsg').hide();
+
   const createTweetElement = function(data) {
     const time = timeago.format(data.created_at);
     const tweet = `<article class="tweet-container">
@@ -72,8 +72,17 @@ $(document).ready(() => {
         data: $('form').serialize()
       }).then(() => {
         $('form')[0].reset();
-        loadTweets();
+        location.reload();
       })
+    }
+  })
+
+  $('.fa-angles-down').click(function(event){
+    event.preventDefault();
+    if ($('.new-tweet').is(':hidden')) {
+      $('.new-tweet').slideDown();
+    } else if ($('.new-tweet').is(':visible')) {
+      $('.new-tweet').slideUp();
     }
   })
 });
