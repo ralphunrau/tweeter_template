@@ -6,8 +6,10 @@
 
 $(document).ready(() => {
 
-  $('.errorMsg').hide();
+  // sets error message to hide when page loads
+  $('.error-msg').hide();
 
+  // creates the html code, interpolating the values inputted
   const createTweetElement = function(data) {
     const time = timeago.format(data.created_at);
     const tweet = `<article class="tweet-container">
@@ -33,6 +35,7 @@ $(document).ready(() => {
     return tweet;
   };
   
+  // dispays all the tweet on load
   const renderTweets = function(data) {
     for (const tweet of data) {
       const $tweet = createTweetElement(tweet);
@@ -40,32 +43,36 @@ $(document).ready(() => {
     }
   };
 
+  // ajax get function to load tweets
   const loadTweets = function() {
     $.ajax({
       method: 'GET',
       url: '/tweets',
-    }).then(function(tweetData){
+    }).then(function(tweetData) {
       renderTweets(tweetData);
-    })
+    });
   };
 
-  const escape = function (str) {
-    let div = document.createElement("div");
+  // disallows cross site scripting
+  const escape = function(str) {
+    let div = document.createElement('div');
     div.appendChild(document.createTextNode(str));
     return div.innerHTML;
   };
 
+  // initalizes the page
   loadTweets();
 
-  $('form').on('submit', function(event){
+  // displays error message if input is wrong, creates tweet if input is okay
+  $('form').on('submit', function(event) {
     event.preventDefault();
-    $('.errorMsg').slideUp();
+    $('.error-msg').slideUp();
     if ($('form').serialize().length === 5) {
-      $('.errorMsg').slideDown();
+      $('.error-msg').slideDown();
     } else if ($('form').serialize().length > 145) {
-      $('.errorMsg').slideDown();
+      $('.error-msg').slideDown();
     } else {
-      $('.errorMsg').slideUp();
+      $('.error-msg').slideUp();
       $.ajax({
         method: 'POST',
         url: '/tweets',
@@ -73,16 +80,17 @@ $(document).ready(() => {
       }).then(() => {
         $('form')[0].reset();
         location.reload();
-      })
+      });
     }
-  })
+  });
 
-  $('.fa-angles-down').click(function(event){
+  //using the compose button to hide/show tweet generator
+  $('.fa-angles-down').click(function(event) {
     event.preventDefault();
     if ($('.new-tweet').is(':hidden')) {
       $('.new-tweet').slideDown();
     } else if ($('.new-tweet').is(':visible')) {
       $('.new-tweet').slideUp();
     }
-  })
+  });
 });

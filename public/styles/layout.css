@@ -22,7 +22,18 @@ body {
   margin-top: 120px
 }
 
-/*
- * Additional CSS can be defined below or in other CSS files, as per instructions
- */
+ /* Responsive design for desktop */
+@media only screen and (min-width: 1230px) {
+  header {
+    width: 40%;
+    height: 550px;
+    float: left;
+    margin-left: 50px;
+    margin-top: 130px;
+  }
 
+  main {
+    width: 40%;
+    float: right;
+  }
+}

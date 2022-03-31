@@ -1,6 +1,9 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
+    <!-- Disable viewport zooming -->
+    <meta name='viewport' content='width=device-width, initial-scale=1.0, maximum-scale=1.0' />
+    
     <!-- Meta Information -->
     <title>Tweeter - Home Page</title>
 
@@ -38,7 +41,7 @@
       </div>
       <div>
         <span class="write">Write </span>
-        <span class="aNewTweet">a new tweet</span>
+        <span class="a-new-tweet">a new tweet</span>
         <div><i class="fa-solid fa-angles-down"></i></div>
       </div>
     </nav>
@@ -48,9 +51,9 @@
         <img src="/images/profile-hex.png"> 
       </div>
       <br>
-      <div class="profileName">
-        <h2 class="firstName">Laofen</h2>
-        <h2 class="lastName">meister</h2>
+      <div class="profile-name">
+        <h2 class="first-name">Laofen</h2>
+        <h2 class="last-name">meister</h2>
       </div>
     </header>
 
@@ -59,18 +62,20 @@
       <section class="new-tweet">
         <form action="/tweets" method="POST">
           <textarea name="text" placeholder="What are you humming about?" id="tweet-text"></textarea>
-          <div class="submitLine">
+          <div class="submit-line">
             <button type="submit">Tweet</button>
             <output name="counter" class="counter" for="tweet-text">140</output>
           </div>
         </form>
       </section>
-      <div class="errorMsg">
+      <!-- error message if input is wrong -->
+      <div class="error-msg">
         <p>Your tweet doesn't match our input requirements!</p>
       </div>
       <section class="tweety-container">
         <!-- The tweets will append here -->
       </section>
+      <i class="fa-solid fa-arrow-up-to-line"></i>
     </main>
   </body>
 </html>

@@ -1,3 +1,4 @@
+/* default styling */
 nav {
   font-family: 'Bungee', cursive;
   height: 120px;
@@ -15,14 +16,17 @@ nav {
   width: 100%;
 }
 
+/* for text 'write' */
 .write {
   font-family: 'Source Sans Pro'; font-weight: 600;
 }
 
-.aNewTweet {
+/* for text 'a new tweet' */
+.a-new-tweet {
   font-family: 'Source Sans Pro'; font-weight: 300;
 }
 
+/* compose button */
 .fa-angles-down {
   display: flex; justify-content: center; color: red;
 }

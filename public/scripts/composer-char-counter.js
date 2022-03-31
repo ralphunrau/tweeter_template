@@ -1,4 +1,5 @@
 $(document).ready(() => {
+  // updates the character count on user input
   $('#tweet-text').on('input', function() {
     const siblingElem = this.nextElementSibling;
     const childrenElem = siblingElem.querySelector('.counter');
@@ -9,6 +10,6 @@ $(document).ready(() => {
     } else {
       $(childrenElem).removeClass('negative');
       $(childrenElem).addClass('positive');
-  }
+    }
   });
 });

@@ -1,3 +1,4 @@
+/* default styling */
 header {
   font-family: 'Source Sans Pro', sans-serif;
   height: 400px;
@@ -10,14 +11,50 @@ header {
   flex-direction: column;
 }
 
-.profileName {
+/* name and picture styling */
+.profile-name {
   display: flex;
 }
 
-.firstName {
+.first-name {
   font-family: 'Source Sans Pro'; font-weight: 600;
 }
 
-.lastName {
+.last-name {
   font-family: 'Source Sans Pro'; font-weight: 300;
 }
+
+/* bouncing animation for drop-down tweet button vvv */
+@keyframes bounce {
+	0%, 100%, 20%, 50%, 80% {
+		-webkit-transform: translateY(0);
+		-ms-transform:     translateY(0);
+		transform:         translateY(0)
+	}
+	40% {
+		-webkit-transform: translateY(-10px);
+		-ms-transform:     translateY(-10px);
+		transform:         translateY(-10px)
+	}
+	60% {
+		-webkit-transform: translateY(-5px);
+		-ms-transform:     translateY(-5px);
+		transform:         translateY(-5px)
+	}
+}
+.fa-angles-down {   
+  -webkit-animation-duration: 1s;
+  animation-duration: 1s;
+  -webkit-animation-fill-mode: both;
+  animation-fill-mode: both;
+  -webkit-animation-timing-function: ease-in-out;
+  animation-timing-function: ease-in-out;
+  animation-iteration-count: infinite;
+  -webkit-animation-iteration-count: infinite;
+}
+.fa-angles-down:hover {
+  cursor: pointer;
+  animation-name: bounce;
+  -moz-animation-name: bounce;
+}
+/* bouncing animation for drop-down tweet button ^^^ */
