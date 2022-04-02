@@ -4,6 +4,7 @@
  * Reminder: Use (and do all your DOM work in) jQuery's document ready function
  */
 
+
 $(document).ready(() => {
 
   // sets error message to hide when page loads
@@ -67,9 +68,12 @@ $(document).ready(() => {
   $('form').on('submit', function(event) {
     event.preventDefault();
     $('.error-msg').slideUp();
-    if ($('form').serialize().length === 5) {
+    let queryString = $('form').serialize();
+    queryString = queryString.slice(5);
+    const englishQueryString = queryString.replaceAll('%20',' ');
+    if (englishQueryString.length === 0) {
       $('.error-msg').slideDown();
-    } else if ($('form').serialize().length > 145) {
+    } else if (englishQueryString.length > 140) {
       $('.error-msg').slideDown();
     } else {
       $('.error-msg').slideUp();
